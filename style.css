@@ -27,8 +27,9 @@ button:hover , a.button:hover{
     text-shadow: 0 0 px;
 }
 
-h1 {
+h1 a {
     font-family: 'Electrolize', sans-serif;
+    text-transform: none;
 }
 
 h2 {
@@ -97,6 +98,10 @@ section:last-child { /* last section (commentary) */
     display: block;
     height: auto;
     padding: 1em;
+}
+
+section:last-child h2 {
+    margin-bottom: 2em;
 }
 
 div.flexGame {
