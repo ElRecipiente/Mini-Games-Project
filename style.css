@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+nav a {
+    color:black
+}
+
+button , a.button {
+    transition: 0.4s;
+}
+
+button:hover , a.button:hover{
+    box-shadow: 0 0 10px rgb(60, 255, 0);
+    text-shadow: 0 0 px;
+}
+
+h1 {
+    font-family: 'Electrolize', sans-serif;
+}
+
+h2 {
+    font-family: 'Electrolize', sans-serif;
+    margin: 1em;
+    text-align: center;
+}
+
+p {
+    width: fit-content;
+    text-align: justify;
+}
+
+/****** NAV ******/
+nav {
+    background: rgb(60, 255, 0);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    color: black;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 1em;
+    list-style: none;
+}
+
+/****** SECTION ******/
+section {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: rgb(47, 16, 133);
+    border: rgb(60, 255, 0) solid 1px;
+    color: white;
+    padding: 3em 1em;
+}
+
+section#accueil {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-image: url(img/accueil.gif);
+    background-size: cover;
+    flex-flow: column;
+    height: 90vh;
+}
+
+section#accueil h2 {
+    text-shadow: 0 0 4px;
+}
+
+section:last-child { /* last section (commentary) */
+    display: block;
+    height: auto;
+    padding: 1em;
+}
+
+div.flexGame {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+div#grid {
+    display: grid;
+    width: 80%;
+    margin: 1em auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+    background: rgb(129, 0, 129);
+    border: 1px solid rgb(60, 255, 0);
+}
+
+section img {
+    width: 30%;
+}
+
+section ul {
+    margin: 1em 0;
+}
+
+section p {
+    width: 80%;
+}
+
+section:last-child p {
+    width: 80%;
+}
+
+section button , a.button {
+    width: fit-content;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(60, 255, 0);
+    border: 0;
+    padding: 1em 2em;
+    margin: 1em;
+    color: black;
+}
+
+section button::after {
+    content: "  →";
+}
+
+/****** ARTICLE ******/
+article {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    padding: 1em;
+}
+
+article * {
+    margin: 1em;
+}
+
+article img {
+    width: 100px;
+    max-width: 100px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+/****** RESPONSIVE ******/
+@media screen and (max-width: 1200px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: fixed;
+        font-size: small;
+    }
+
+    nav ul li {
+        padding: 0 0.1em;
+    }
+
+    div#grid {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    
+    section {
+        flex-flow: column;
+        height: auto;
+        font-size: small;
+    }
+
+    section#accueil {
+        height: 100vh;
+        justify-content: space-evenly;
+    }
+
+    section img {
+        width: 80%;
+        margin: 1em;
+    }
+
+    section ul li {
+        list-style: none;
+    }
+    
+    div.flexGame {
+        width: 100%;
+    }
+    
+    article {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+}
