@@ -3,19 +3,24 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Ubuntu', sans-serif;
-    box-sizing: border-box;
+    font-family: 'Electrolize', sans-serif;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 a {
     text-decoration: none;
     color: black;
+    font-family: 'Electrolize', sans-serif;
+    text-transform: uppercase;
+}
+
+a.button {
     text-transform: uppercase;
 }
 
 nav a {
-    color:black
+    color:black;
 }
 
 button , a.button {
@@ -24,18 +29,18 @@ button , a.button {
 
 button:hover , a.button:hover{
     box-shadow: 0 0 10px rgb(60, 255, 0);
-    text-shadow: 0 0 px;
 }
 
-h1 a {
-    font-family: 'Electrolize', sans-serif;
-    text-transform: none;
-}
-
-h2 {
+h2 , h3 {
     font-family: 'Electrolize', sans-serif;
     margin: 1em;
     text-align: center;
+    font-size: 1.3em;
+    color: rgb(60, 255, 0);
+}
+
+h3 {
+    font-size: 1.1em;
 }
 
 p {
@@ -53,9 +58,10 @@ nav {
     padding: 2em;
     color: black;
     width: 100%;
+    height: 10vh;
 }
 
-nav ul {
+nav > ul {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
@@ -63,9 +69,160 @@ nav ul {
 }
 
 nav ul li {
-    padding: 0 1em;
+    display: flex;
+    justify-content: center;
     list-style: none;
+    padding: 1em;
+    background: rgb(60, 255, 0);
+    transition: 0.2s;
+    width: 150px;
 }
+
+nav ul li a {
+    text-align: center;
+}
+
+nav ul li:hover {
+    background: black;
+}
+
+nav ul li:hover a {
+    color: rgb(60, 255, 0);
+}
+
+nav li#jeux {
+    position: relative;
+}
+
+nav ul.subMenu {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    top: 3em;
+}
+
+nav li#jeux:hover ul.subMenu {
+    visibility: visible;
+}
+
+nav ul.subMenu li a {
+    color: black;
+}
+
+nav ul.subMenu li:hover a {
+    color: rgb(60, 255, 0);
+}
+
+/****** LOADING PAGE ******/
+div#loadingPage {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background:black;
+    z-index: 10;
+    animation: loading 5s forwards;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 100%;
+    }
+    80% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+div#loadingPage h2 {
+    font-size: 5em;
+    animation: loadingP 2.5s infinite;
+}
+
+@keyframes loadingP {
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+div#loadingPage div#loadingBar {
+    margin: 5em 0 5em 9vw ;
+    background: rgb(60, 255, 0);
+    height: 5vh;
+    align-self: flex-start;
+    animation: loadBar 4s forwards;
+}
+
+@keyframes loadBar {
+
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 20vw;
+    }
+
+    80% {
+        width: 60vw;
+    }
+
+    100% {
+        width: 80vw;
+    }
+}
+
+/****** SVG ******/
+#itemSVG {
+    width: 15vh;
+}
+
+.greenLight {
+    fill: greenyellow;
+    animation: rotateL 1s infinite;
+}
+
+.greenDark {
+    fill: green;
+    animation: rotateD 1s infinite;
+}
+
+/* @keyframes rotateL {
+
+    50% {
+        fill: green;
+    }
+
+    100% {
+        fill: greenyellow;
+    }
+}
+
+@keyframes rotateD {
+    
+    50% {
+        fill: greenyellow;
+    }
+
+    100% {
+        fill: green;
+    }
+} */
 
 /****** SECTION ******/
 section {
@@ -185,8 +342,8 @@ article img {
         font-size: small;
     }
 
-    nav ul li {
-        padding: 0 0.1em;
+    nav ul {
+        visibility: hidden;
     }
 
     div#grid {
