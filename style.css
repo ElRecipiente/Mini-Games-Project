@@ -346,6 +346,10 @@ article img {
         visibility: hidden;
     }
 
+    div#loadingPage h2 {
+        font-size: 2em;
+    }
+
     div#grid {
         display: flex;
         flex-flow: column;
