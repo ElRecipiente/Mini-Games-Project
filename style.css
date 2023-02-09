@@ -8,6 +8,15 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(28, 9, 80);
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -46,6 +55,12 @@ h3 {
 p {
     width: fit-content;
     text-align: justify;
+}
+
+a#UP {
+    position: fixed;
+    right: 2.5vh;
+    bottom: 5vh;
 }
 
 /****** NAV ******/
@@ -124,19 +139,21 @@ div#loadingPage {
     align-items: center;
     position: absolute;
     top: 0;
-    width: 100vw;
+    left: 0;
+    width: 100%;
     height: 100vh;
     background:black;
     z-index: 10;
+    opacity: 99%;
     animation: loading 5s forwards;
 }
 
 @keyframes loading {
     0% {
-        opacity: 100%;
+        opacity: 99%;
     }
     80% {
-        opacity: 100%;
+        opacity: 99%;
     }
     100% {
         opacity: 0%;
@@ -146,24 +163,26 @@ div#loadingPage {
 
 div#loadingPage h2 {
     font-size: 5em;
-    animation: loadingP 2.5s infinite;
+    color: white;
+    text-shadow: 0 0 4px;
+    animation: shiny 2s infinite;
 }
 
-@keyframes loadingP {
+@keyframes shiny {
 
     50% {
-        opacity: 0;
+        text-shadow: 0 0 8px;
     }
 
     100% {
-        opacity: 1;
+        text-shadow: 0 0 4px;
     }
 }
 
 div#loadingPage div#loadingBar {
     margin: 5em 0 5em 9vw ;
-    background: rgb(60, 255, 0);
-    height: 5vh;
+    background: white;
+    height: 1vh;
     align-self: flex-start;
     animation: loadBar 4s forwards;
 }
@@ -189,40 +208,97 @@ div#loadingPage div#loadingBar {
 
 /****** SVG ******/
 #itemSVG {
-    width: 15vh;
+    width: 10vh;
 }
 
-.greenLight {
-    fill: greenyellow;
-    animation: rotateL 1s infinite;
+.ext {
+    opacity: 0;
+    fill: white;
+    animation: blinky 0.3s forwards;
+    animation-delay: 3.75s;
 }
 
-.greenDark {
-    fill: green;
-    animation: rotateD 1s infinite;
-}
+@keyframes blinky {
 
-/* @keyframes rotateL {
+    0% {
+        opacity: 0;
+    }
 
-    50% {
-        fill: green;
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
     }
 
     100% {
-        fill: greenyellow;
+        opacity: 1;
     }
+
 }
 
-@keyframes rotateD {
-    
-    50% {
-        fill: greenyellow;
+.int {
+    fill: white;
+    opacity: 0;
+    animation: fade 0.3s forwards;
+}
+
+.int.HaDr {
+    animation-delay: 0.75s;
+}
+
+.int.BaDr {
+    animation-delay: 1.75s;
+}
+
+.int.BaGa {
+    animation-delay: 2.75s;
+}
+
+.int.HaGa {
+    animation-delay: 3.75s;
+}
+
+.Top , .Right , .Bottom , .Left {
+    opacity: 0;
+    fill: white;
+    animation: fade 0.3s forwards;
+}
+
+.Top {
+    animation-delay: 0.25s;
+}
+
+.Right {
+    animation-delay: 1.25s;
+}
+
+.Bottom {
+    animation-delay: 2.25s;
+}
+
+.Left {
+    animation-delay: 3.25s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
     }
 
     100% {
-        fill: green;
+        opacity: 1;
     }
-} */
+}
 
 /****** SECTION ******/
 section {
@@ -269,7 +345,7 @@ div.flexGame {
     width: 40%;
 }
 
-div#grid {
+div#commentaries {
     display: grid;
     width: 80%;
     margin: 1em auto;
@@ -340,6 +416,7 @@ article img {
     nav {
         position: fixed;
         font-size: small;
+        width: 80%;
     }
 
     nav ul {
@@ -350,7 +427,7 @@ article img {
         font-size: 2em;
     }
 
-    div#grid {
+    div#commentaries {
         display: flex;
         flex-flow: column;
         justify-content: center;
