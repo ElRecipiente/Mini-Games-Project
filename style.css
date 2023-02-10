@@ -164,23 +164,22 @@ div#loadingPage {
 div#loadingPage h2 {
     font-size: 5em;
     color: white;
-    text-shadow: 0 0 4px;
+    text-shadow: 0 0 8px;
     animation: shiny 2s infinite;
 }
 
 @keyframes shiny {
 
     50% {
-        text-shadow: 0 0 8px;
+        text-shadow: 0 0 12px;
     }
 
-    100% {
-        text-shadow: 0 0 4px;
-    }
 }
 
 div#loadingPage div#loadingBar {
     margin: 5em 0 5em 9vw ;
+    position: absolute;
+    bottom: 0;
     background: white;
     height: 1vh;
     align-self: flex-start;
@@ -203,6 +202,344 @@ div#loadingPage div#loadingBar {
 
     100% {
         width: 80vw;
+    }
+}
+
+/****** GHOST ******/
+.ghost {
+    background: white;
+    opacity: 0;
+    box-shadow: 0 0 4px white;
+    position: absolute;
+    width: 1vw;
+    height: 5vh;
+    border-radius: 1em;
+    top: 0;
+}
+
+.ghost#g0 {
+    left: 12vw;
+    top: 15vh;
+    width: 0.5vw;
+    height: 2.5vh;
+    animation: ghost0 5s infinite;
+}
+
+@keyframes ghost0 {
+    
+    0% {
+        opacity: 0.3;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    60% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 0.8;
+        top: 75vh;
+    }
+
+}
+
+.ghost#g1 {
+    left: 18vw;
+    top: 10vh;
+    width: 1vw;
+    height: 5vh;
+    animation: ghost1 5s infinite;
+}
+
+@keyframes ghost1 {
+    
+    0% {
+        opacity: 0.3;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    60% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+    
+    100% {
+        opacity: 0.8;
+        top: 50vh;
+    }
+}
+
+.ghost#g2 {
+    left: 21vw;
+    top: 30vh;
+    width: 0.75vw;
+    height: 3.75vh;
+    animation: ghost2 5s infinite;
+}
+
+@keyframes ghost2 {
+    
+    0% {
+        opacity: 0.6;
+    }
+
+    20% {
+        opacity: 0.3;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    60% {
+        opacity: 0.3;
+    }
+
+    80% {
+        opacity: 0.6;
+    }
+    
+    100% {
+        opacity: 0.3;
+        top: 70vh;
+    }
+}
+
+.ghost#g3 {
+    left: 29vw;
+    top: 25vh;
+    width: 0.3vw;
+    height: 1.5vh;
+    animation: ghost3 5s infinite;
+}
+
+@keyframes ghost3 {
+    
+    0% {
+        opacity: 0.2;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    40% {
+        opacity: 0.2;
+    }
+
+    60% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.2;
+    }
+    
+    100% {
+        opacity: 0.7;
+        top: 65vh;
+    }
+}
+
+.ghost#g4 {
+    left: 69vw;
+    top: 25vh;
+    width: 1vw;
+    height: 5vh;
+    animation: ghost4 5s infinite;
+}
+
+@keyframes ghost4 {
+    
+    0% {
+        opacity: 0.8;
+    }
+
+    20% {
+        opacity: 0.1;
+    }
+
+    40% {
+        opacity: 0.8;
+    }
+
+    60% {
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+    
+    100% {
+        opacity: 0.1;
+        top: 70vh;
+    }
+}
+
+.ghost#g5 {
+    left: 75vw;
+    top: 15vh;
+    width: 0.75vw;
+    height: 3.75vh;
+    animation: ghost5 5s infinite;
+}
+
+@keyframes ghost5 {
+    
+    0% {
+        opacity: 0.3;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    60% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+    
+    100% {
+        opacity: 0.8;
+        top: 45vh;
+    }
+}
+
+.ghost#g6 {
+    left: 83vw;
+    top: 15vh;
+    width: 0.3vw;
+    height: 1.5vh;
+    animation: ghost0 6s infinite;
+}
+
+@keyframes ghost6 {
+    
+    0% {
+        opacity: 0.9;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    40% {
+        opacity: 0.9;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+    
+    100% {
+        opacity: 0.2;
+        top: 55vh;
+    }
+}
+
+
+.ghost#g7 {
+    left: 80vw;
+    top: 5vh;
+    width: 0.75vw;
+    height: 3.75vh;
+    animation: ghost7 5s infinite;
+}
+
+@keyframes ghost7 {
+    
+    0% {
+        opacity: 0.3;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    60% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+    
+    100% {
+        opacity: 0.8;
+        top: 65vh;
+    }
+}
+
+.ghost#g8 {
+    left: 90vw;
+    top: 10vh;
+    width: 1.25vw;
+    height: 6.25vh;
+    animation: ghost1 5s infinite;
+}
+
+@keyframes ghost6 {
+    
+    0% {
+        opacity: 0.9;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    40% {
+        opacity: 0.9;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+    
+    100% {
+        opacity: 0.2;
+        top: 55vh;
     }
 }
 
@@ -463,5 +800,9 @@ article img {
         display: flex;
         flex-flow: column;
         align-items: center;
+    }
+
+    a#UP.button {
+        visibility: hidden;
     }
 }
