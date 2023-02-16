@@ -72,14 +72,14 @@ nav ul li {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 1em;
     background: rgb(60, 255, 0);
     transition: 0.2s;
-    width: 150px;
+    width: 200px;
 }
 
 nav ul li a {
     text-align: center;
+    padding: 1em 3em;
 }
 
 nav ul li:hover {
